@@ -1,4 +1,4 @@
-**Mongoose Previous Data** 
+**Mongoose Previous Data**
 
 is a mongoose plugin with which you can get the previous data. For example after update or after save some data you can get only changed fields or even new/deleted/edited rows array.
 
@@ -17,7 +17,7 @@ schemaOrders.plugin(mongoosePreData, {populate: 'city ordersArray.order', class:
 **Option keys and defaults**
  populate: use if you need get some field from other collections
  class: name for context mongoose data. Defaul 'mpd'
- 
+
 **Usage**
 getPreviousData: Function return previous data or some field from data
 * @param {Array} fields for checked changes. Default: null - return all prev data
@@ -33,7 +33,7 @@ getChangesForArray: Function return changes by Array
 * @param {String} name name array in mongoose
 * @param {String} key unique field for find changes
 * @param {Array} kind enum ['N' - new, 'D' - delete, 'E' - edit]
-* @param {Array} fields 
+* @param {Array} fields
 ```
 schemaOrders.post('findOneAndUpdate', function (doc, next) {
   // return new and delete orders
