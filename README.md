@@ -4,7 +4,7 @@ is a mongoose plugin with which you can get the previous data. For example after
 
 **Installation**
 ```
-$ npm install mongoose-previous
+$ npm install mongoose-previous --save
 ```
 
 **Setup**
