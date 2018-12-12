@@ -4,7 +4,7 @@
   "description": "Mongoose Previous Data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/rayozerets/mongoose-previous/issues"
   },
-  "homepage": "https://github.com/rayozerets/mongoose-previous#readme"
+  "homepage": "https://github.com/rayozerets/mongoose-previous#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "install": "^0.12.2",
+    "mocha": "^5.2.0",
+    "npm": "^6.5.0"
+  },
+  "dependencies": {
+    "mongoose": "^5.3.15"
+  }
 }

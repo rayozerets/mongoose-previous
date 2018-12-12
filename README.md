@@ -3,11 +3,13 @@
 is a mongoose plugin with which you can get the previous data. For example after update or after save some data you can get only changed fields or even new/deleted/edited rows array.
 
 **Installation**
+
 ```
 $ npm install mongoose-previous --save
 ```
 
 **Setup**
+
 ```
 const mongoosePreData = require('mongoose-previous');
 
@@ -15,10 +17,12 @@ schemaOrders.plugin(mongoosePreData, {populate: 'city ordersArray.order', class:
 
 ```
 **Option keys and defaults**
+
  populate: use if you need get some field from other collections
  class: name for context mongoose data. Defaul 'mpd'
 
 **Usage**
+
 getPreviousData: Function return previous data or some field from data
 * @param {Array} fields for checked changes. Default: null - return all prev data
 ```
@@ -29,7 +33,7 @@ schemaOrders.post('findOneAndUpdate', function (doc, next) {
   const prevData = this.mpd.getPreviousData();
 });
 ```
-getChangesForArray: Function return changes by Array
+getChangesForArray: Function return changes by Array { new: [some new rows], edit: [some edit rows], delete: [some del rows] }
 * @param {String} name name array in mongoose
 * @param {String} key unique field for find changes
 * @param {Array} kind enum ['N' - new, 'D' - delete, 'E' - edit]
@@ -51,7 +55,7 @@ getCurrentData: Function return current data
 * @param {Array} fields for checked changes
 ```
 schemaOrders.post('findOneAndUpdate', function (doc, next) {
-  cconst updatedData = context.mpd.getCurrentData();
+  const updatedData = context.mpd.getCurrentData();
 });
 ```
 
