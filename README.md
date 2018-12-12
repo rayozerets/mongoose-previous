@@ -19,6 +19,7 @@ schemaOrders.plugin(mongoosePreData, {populate: 'city ordersArray.order', class:
 **Option keys and defaults**
 
  populate: use if you need get some field from other collections
+
  class: name for context mongoose data. Defaul 'mpd'
 
 **Usage**
@@ -59,4 +60,4 @@ schemaOrders.post('findOneAndUpdate', function (doc, next) {
 });
 ```
 
-All this function you can use for "post save" too
+All this functions you can use for "post save" too
