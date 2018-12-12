@@ -1,6 +1,6 @@
 {
   "name": "mongoose-previous",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mongoose Previous Data",
   "main": "index.js",
   "scripts": {
